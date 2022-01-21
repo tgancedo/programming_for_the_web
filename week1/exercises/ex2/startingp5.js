@@ -1,13 +1,17 @@
 function setup() {
-  createCanvas(1920, 1080);
-  background(color(0, 0, 255));
+  createCanvas(windowWidth, windowHeight);
+  background(0, 0, 255);
+  frameRate(40); 
 }
 
 function draw() {
   if (mouseIsPressed) {
-    fill(0);
-  } else {
     fill(255);
+    stroke(0, 0, 255);
+    ellipse(mouseX, mouseY, 80, 80);
   }
-  ellipse(mouseX, mouseY, 80, 80);
+}
+
+function mousePressed() {
+  background(0, 0, 255);
 }
