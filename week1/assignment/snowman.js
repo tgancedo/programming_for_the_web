@@ -1,6 +1,6 @@
 let grid = undefined;
-//let fill1 = prompt("enter a basic color name in lowercase", "green");
-//let fill2 = prompt("enter another basic color lowercase", "magenta");
+let fill1 = prompt("enter a basic color name in lowercase", "chartreuse");
+let fill2 = prompt("enter another basic color lowercase", "magenta");
 function setup() {
   createCanvas(1000, 800);
   background("#a7bdd5");
@@ -27,13 +27,13 @@ function draw() {
   // snowman head
   ellipse(500, 200, 200);
   // snowman hat top
-  fill("#cdff00");
+  fill(fill1);
   ellipse(500, 90, 100);
   // snowman hat body
   strokeJoin(ROUND);
   rect(400, 80, 200, 80);
   // snowman scarf horizontal
-  fill("#ff00ff");
+  fill(fill2);
   strokeJoin(ROUND);
   rect(350, 278, 300, 70);
   // snowman scarf vertical
@@ -57,7 +57,12 @@ function draw() {
   strokeWeight(15);
   point(180, 550);
   point(220, 550);
+  // left baby mouth
+  noFill();
+  strokeWeight(8);
+  arc(200, 590, 40, 40, radians(230), radians(310));
   // right baby body
+  fill("#f1f1f1");
   strokeWeight(10);
   ellipse(800, 650, 180);
   // right baby head
@@ -66,7 +71,12 @@ function draw() {
   strokeWeight(15);
   point(770, 520);
   point(830, 520);
+  // right baby mouth
+  noFill();
+  strokeWeight(8);
+  arc(800, 550, 30, 30, radians(40), radians(400));
   // ground
+  fill("#f1f1f1");
   strokeWeight(10);
   rect(-5, 700, 1010, 200);
 }
