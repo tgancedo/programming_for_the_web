@@ -16,10 +16,20 @@ function draw() {
   ellipse(400, 650, 100);
   // right leg
   ellipse(600, 650, 100);
+  // left arm
+  stroke(0);
+  strokeWeight(10);
+  line(200, 500, 430, 330);
+  // right arm
+  stroke (0);
+  strokeWeight(10);
+  line(800, 450, 430, 330);
   // body
   ellipse(500, 450, 350, 400);
   // head
   ellipse(500, 200, 200);
+  // hat top
+  ellipse(500, 90, 100);
   // hat body
   strokeJoin(ROUND);
   rect(400, 80, 200, 80);
@@ -32,6 +42,8 @@ function draw() {
   noFill();
   strokeWeight(10);
   arc(500, 230, 70, 70, radians(30), radians(150));
-  // left arm
-  
+  // ground
+  fill("#f1f1f1");
+  noStroke();
+  rect(0, 700, 1000, 200);
 }
