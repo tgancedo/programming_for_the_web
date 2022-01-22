@@ -60,7 +60,7 @@ function draw() {
   // left baby mouth
   noFill();
   strokeWeight(8);
-  arc(200, 590, 40, 40, radians(230), radians(310));
+  line(180, 575, 220, 575);
   // right baby body
   fill("#f1f1f1");
   strokeWeight(10);
