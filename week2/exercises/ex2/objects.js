@@ -6,5 +6,5 @@ const games = [
 ];
 console.log(games);
 
-const promptResponse = window.prompt("I have 4 childhood games in my collection. Pick a number between 0 and 3 and I'll tell you about that game");
+const promptResponse = window.prompt("I have 4 childhood games in my collection. Pick a number between 1 and 4 and I'll tell you about that game");
 window.alert('You selected ' + games[promptResponse - 1].title + ' which is a ' + games[promptResponse - 1].type + 'game');
