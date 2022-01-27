@@ -5,3 +5,6 @@ const games = [
   { title: 'Guess Who?', type: 'board', numberOfPlayers: '2', rating: '5/10', shortDescription: 'Guess who your opponents character is by questioning different characteristics and flip down your list of options until you have one left' }
 ];
 console.log(games);
+
+const promptResponse = window.prompt("I have 4 childhood games in my collection. Pick a number between 0 and 3 and I'll tell you about that game");
+window.alert('You selected ' + games[promptResponse - 1].title + ' which is a ' + games[promptResponse - 1].type + 'game');
