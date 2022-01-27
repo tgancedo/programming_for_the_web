@@ -6,3 +6,4 @@ myFavMovies.push(extraMovie);
 console.log('My Fav Movies updated');
 
 window.alert(myFavMovies.join(', '));
+console.log(myFavMovies.toString());
