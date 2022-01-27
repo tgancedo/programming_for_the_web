@@ -2,5 +2,5 @@ const myFavMovies = ['Back to the Future', 'The Fifth Element', 'Spirited Away',
 console.log(myFavMovies);
 
 const extraMovie = window.prompt('What is your favorite movie?');
-myFavMovies.push('sdflsdjf');
+myFavMovies.push(extraMovie);
 console.log('My Fav Movies updated');
