@@ -8,4 +8,10 @@ console.log(questions);
 const questionLength = questions.length;
 const questionIndex = Math.floor(Math.random() * questionLength);
 const answer = window.prompt(questions[questionIndex].question);
-window.alert('You answered ' + answer + '. The correct answer is ' + questions[questionIndex].answer + '.');
+window.alert('You answered ' + answer + '. The correct answer was ' + questions[questionIndex].answer + '.');
+
+if (answer === questions[questionIndex].answer) {
+  document.write('nice!');
+} else {
+  document.write('sorry, maybe next time!');
+}
