@@ -11,7 +11,9 @@ const answer = window.prompt(questions[questionIndex].question);
 window.alert('You answered ' + answer + '. The correct answer was ' + questions[questionIndex].answer + '.');
 
 if (answer === questions[questionIndex].answer) {
-  document.write('nice!');
+  document.write('<p id="text">' + 'Nice!');
+  document.body.style.backgroundColor = 'green';
 } else {
-  document.write('sorry, maybe next time!');
+  document.write('<p id="text">' + 'Sorry, maybe next time!');
+  document.body.style.backgroundColor = 'red';
 }
