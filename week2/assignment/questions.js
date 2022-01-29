@@ -2,7 +2,8 @@ const questions = [
   { question: 'What geometric shape is generally used for stop signs?', answer: 'octagon' },
   { question: 'What is the rarest M&M color?', answer: 'brown' },
   { question: 'What is the most consumed manufactured drink in the world?', answer: 'tea' },
-  { question: 'What does come down but never goes up?', answer: 'rain' }
+  { question: 'What does come down but never goes up?', answer: 'rain' },
+  { question: 'How many hearts does an octopus have?', answer: 'three' }
 ];
 console.log(questions);
 
