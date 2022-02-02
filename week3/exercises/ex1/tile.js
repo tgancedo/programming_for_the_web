@@ -5,13 +5,13 @@ function setup() {
 function createTile() {
   translate(0, 0);
   fill('black');
-  rect(0, 0, 200, 200);
   noStroke();
+  rect(0, 0, 200, 200);
   fill('orange');
   circle(100, 100, 200);
-  // stroke('white');
-  // strokeWeight(5);
-  // line(0, 0, 200, 200);
+  stroke('white');
+  strokeWeight(5);
+  line(0, 0, 200, 200);
   // line(200, 0, 0, 200);
   // noStroke();
   // fill('yellow');
