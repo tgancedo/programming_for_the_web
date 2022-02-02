@@ -21,4 +21,5 @@ function createTile() {
 
 function draw() {
   createTile();
+  noLoop();
 }
