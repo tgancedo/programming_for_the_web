@@ -8,7 +8,9 @@ function createTile() {
   noStroke();
   rect(0, 0, 200, 200);
   fill('orange');
-  circle(200, 200, 200);
+  circle(200, 200, 150);
+  fill('yellow');
+  circle(0, 200, 150);
   // noStroke();
   // fill('yellow');
   // circle(100, 50, 50);
