@@ -16,7 +16,7 @@ function createTile() {
   fill('red');
   circle(200, 0, 150);
   fill('white');
-  quad(100, 80, 120, 100, 100, 120, 80, 100);
+  quad(100, 70, 120, 100, 100, 130, 80, 100);
 }
 
 function draw() {
