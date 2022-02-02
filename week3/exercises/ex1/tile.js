@@ -15,16 +15,8 @@ function createTile() {
   circle(0, 0, 150);
   fill('red');
   circle(200, 0, 150);
-  // noStroke();
-  // fill('yellow');
-  // circle(100, 50, 50);
-  // circle(50, 100, 50);
-  // circle(150, 100, 50);
-  // circle(100, 150, 50);
-  // noFill();
-  // stroke('purple');
-  // strokeWeight(5);
-  // circle(100, 100, 100);
+  fill('white');
+  quad(100, 80, 120, 100, 100, 120, 80, 100);
 }
 
 function draw() {
