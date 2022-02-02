@@ -11,6 +11,8 @@ function createTile() {
   circle(200, 200, 150);
   fill('yellow');
   circle(0, 200, 150);
+  fill('green');
+  circle(0, 0, 150);
   // noStroke();
   // fill('yellow');
   // circle(100, 50, 50);
