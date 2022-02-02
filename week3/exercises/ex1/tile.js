@@ -1,5 +1,6 @@
 function setup() {
   createCanvas(200,200);
+  angleMode(DEGREES);
 }
 
 function createTile() {
@@ -8,13 +9,13 @@ function createTile() {
   noStroke();
   rect(0, 0, 200, 200);
   fill('orange');
-  circle(200, 200, 150);
+  arc(200, 200, 150, 150, 180, 270);
   fill('yellow');
-  circle(0, 200, 150);
+  arc(0, 200, 150, 150, 270, 0);
   fill('green');
-  circle(0, 0, 150);
+  arc(0, 0, 150, 150, 150, 90);
   fill('red');
-  circle(200, 0, 150);
+  arc(200, 0, 150, 150, 90, -90);
   fill('white');
   quad(100, 70, 120, 100, 100, 130, 80, 100);
 }
