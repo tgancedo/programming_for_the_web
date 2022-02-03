@@ -42,7 +42,7 @@ function draw() {
   // createTile(0, 200, 'indigo', 'blue');
 
   for(let i = 0; i < coordinates.length; i++) {
-    createTile(coordinates[i].offsetX, coordinates[i].offsetY, 'red', 'blue');
+    createTile(coordinates[i].offsetX, coordinates[i].offsetY, 'blue', 'red');
     } 
   console.log(createTile);
 }
