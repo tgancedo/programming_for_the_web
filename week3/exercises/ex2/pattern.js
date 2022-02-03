@@ -10,7 +10,6 @@ let coordinates = [
   {offsetX: 0, offsetY: 200}
 ]
 
-
 function setup() {
   createCanvas(600, 600);
   angleMode(DEGREES);
