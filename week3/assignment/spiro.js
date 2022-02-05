@@ -1,26 +1,40 @@
+let angle = 0;
 let rotateBy = 5;
+let r, g, b;
 
 function setup() {
   createCanvas(1000, 1000);
   background(0);
   angleMode(DEGREES);
+  r = random(255);
+  g = random(255);
+  b = random(255);
 }
 
-function makeArm(rotateBy, color) {
+function makeArm(rotateBy) {
   let alt = Math.round(rotateBy / 360);
   noFill();
-  stroke(color);
+  stroke(r, g, b);
   strokeWeight(1);
-  ellipse(-56, -56, 200, 200);
+  line(30, 20 + alt, 85, 75);
+  ellipse(150, 150 + alt, 200, 200 - alt);
 }
 
 function draw() {
   translate(500, 500);
   rotate(rotateBy);
-  makeArm(rotateBy, 'blue');
+  makeArm(rotateBy);
   rotateBy += 5;
 }
 
 function mousePressed() {
+  let d = dist(mouseX, mouseY, 500, 500);
+  if (d < 500) {
+    r = random(255);
+    g = random(255);
+    b = random(255);
+  } else {
   noLoop();
+  }
+  // redraw();
 }
