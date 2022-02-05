@@ -14,8 +14,8 @@ function setup() {
   button.position(0, 0);
   button.mousePressed(noLoop);
 
-  //start button
-  button = createButton('start');
+  //continue button
+  button = createButton('continue');
   button.position(500, 0);
   button.mousePressed(loop);
 }
@@ -26,8 +26,10 @@ function makeArm(circleX, circleY, rotateBy) {
   noFill();
   stroke(r, g, b);
   strokeWeight(1);
-  line(30, 20 + alt, 85, 75);
-  ellipse(circleX, circleY + alt, 200, 200 - alt);
+  ellipse(circleX, circleY + alt, 150 - alt);
+
+  //line
+  line(50, 50 + alt, 120, 75);
 
   //small square
   rectMode(CENTER);
@@ -39,6 +41,7 @@ function draw() {
   translate(500, 500);
   rotate(rotateBy);
   makeArm(150, 150, rotateBy);
+  makeArm(200, 200, rotateBy);
   rotateBy += 5;
 }
 
