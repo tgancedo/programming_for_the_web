@@ -12,13 +12,13 @@ function setup() {
   //stop button
   button = createButton('stop');
   button.size(80, 26);
-  button.position(400, 950);
+  button.position(414, 950);
   button.mousePressed(noLoop);
 
   //continue button
   button = createButton('continue');
   button.size(80,26);
-  button.position(500, 950);
+  button.position(522, 950);
   button.mousePressed(loop);
 }
 
