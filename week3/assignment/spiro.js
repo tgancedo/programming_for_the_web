@@ -9,6 +9,12 @@ function setup() {
   r = random(255);
   g = random(255);
   b = random(255);
+  button = createButton('stop');
+  button.position(0, 0);
+  button.mousePressed(noLoop);
+  button = createButton('start');
+  button.position(500, 0);
+  button.mousePressed(loop);
 }
 
 function makeArm(rotateBy) {
@@ -28,13 +34,7 @@ function draw() {
 }
 
 function mousePressed() {
-  let d = dist(mouseX, mouseY, 500, 500);
-  if (d < 500) {
     r = random(255);
     g = random(255);
     b = random(255);
-  } else {
-  noLoop();
-  }
-  // redraw();
 }
