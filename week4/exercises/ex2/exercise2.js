@@ -38,6 +38,7 @@ function mousePressed() {
 }
 
 function drawShape() {
-  fill('purple');
+  fill('yellow');
+  strokeWeight(0);
   rect(rectX, rectY, rectWidth, rectHeight, 20);
 }
