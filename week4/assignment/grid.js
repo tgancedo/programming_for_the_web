@@ -1,4 +1,4 @@
-const rectWidth = 200;
+const cardWidth = 200;
 let startingX = 30;
 let startingY = 200;
 let cards = [];
@@ -9,7 +9,7 @@ function setup() {
   background(255);
   for (let k = 0; k < 4; k++) {
     for (let i = 0; i < 4; i++) {
-      rect(startingX, startingY, rectWidth);
+      rect(startingX, startingY, cardWidth);
       cards.push({ x: startingX, y: startingY, id: startingId });
       startingX += 225;
       startingId++;
@@ -22,9 +22,9 @@ function setup() {
 
 function mousePressed() {
   for (let j = 0; j < cards.length; j++) {
-    if ((mouseX >= cards[j].x) && (mouseX <= cards[j].x + rectWidth) &&
-        (mouseY >= cards[j].y) && (mouseY <= cards[j].y + rectWidth)) {
-      console.log('square hit', cards[j].id);
+    if ((mouseX >= cards[j].x) && (mouseX <= cards[j].x + cardWidth) &&
+        (mouseY >= cards[j].y) && (mouseY <= cards[j].y + cardWidth)) {
+      console.log('card hit', cards[j].id);
       return false;
     }
   }
