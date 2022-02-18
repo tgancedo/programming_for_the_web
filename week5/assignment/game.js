@@ -27,7 +27,7 @@ function setup () {
   createCanvas(1080, 1080);
   background(255);
   let selectedFaces = [];
-  for (let z = 0; z < 5; z++) {
+  for (let z = 0; z < 8; z++) {
     const randomIdx = floor(random(cardfaceArray.length));
     const face = cardfaceArray[randomIdx];
     selectedFaces.push(face);
@@ -37,7 +37,8 @@ function setup () {
   }
   for (let j = 0; j < 4; j++) {
     for (let i = 0; i < 4; i++) {
-      cards.push(new Card(startingX, startingY, cardfaceArray[0]));
+      const faceImage = selectedFaces.pop();
+      cards.push(new Card(startingX, startingY, faceImage));
       startingX += 225;
     }
     startingY += 225;
