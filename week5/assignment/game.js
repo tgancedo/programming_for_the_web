@@ -1,4 +1,3 @@
-let myCard;
 const DOWN = 'down';
 const UP = 'up';
 let startingX = 30;
@@ -12,18 +11,21 @@ const gameState = {
   waiting: false
 };
 let cardfaceArray = [];
+let cardback;
+let myFont;
 
 function preload() {
-  cardback = loadImage('images/card-back.png');
+  myFont = loadFont('assets/Rajdhani-Medium.ttf');
+  cardback = loadImage('assets/card-back.png');
   cardfaceArray = [
-    loadImage('images/avocado.png'),
-    loadImage('images/cucumber.png'),
-    loadImage('images/salmon-avocado.png'),
-    loadImage('images/salmon-cucumber.png'),
-    loadImage('images/salmon.png'),
-    loadImage('images/tuna-avocado.png'),
-    loadImage('images/tuna-cucumber.png'),
-    loadImage('images/tuna.png')
+    loadImage('assets/avocado.png'),
+    loadImage('assets/cucumber.png'),
+    loadImage('assets/salmon-avocado.png'),
+    loadImage('assets/salmon-cucumber.png'),
+    loadImage('assets/salmon.png'),
+    loadImage('assets/tuna-avocado.png'),
+    loadImage('assets/tuna-cucumber.png'),
+    loadImage('assets/tuna.png')
   ]
 }
 
@@ -54,7 +56,9 @@ function draw () {
   background(244, 240, 233);
   if (gameState.numMatched === gameState.totalPairs) {
     fill(255, 102, 29);
+    noStroke();
     textSize(40);
+    textFont(myFont);
     text('you win!', 710, 160);
     noLoop();
   }
@@ -69,6 +73,7 @@ function draw () {
   gameState.waiting = false;
   fill(0, 44, 0);
   textSize(70);
+  textFont(myFont);
   text('Sushi Roll Memory Game', 30, 80);
   textSize(40);
   text('attempts ' + gameState.attempts, 30, 160);
@@ -91,7 +96,7 @@ function mousePressed () {
   if (gameState.flippedCards.length === 2) {
     gameState.attempts++;
     if (gameState.flippedCards[0].cardfaceImg === gameState.flippedCards[1].cardfaceImg) {
-      // cards match! time to score!
+      // if cards match
       // mark cards as matched so they don't flip back
       gameState.flippedCards[0].isMatch = true;
       gameState.flippedCards[1].isMatch = true;
@@ -101,6 +106,7 @@ function mousePressed () {
       gameState.numMatched++;
       loop();
     } else {
+      // if they don't match
       gameState.waiting = true;
         const loopTimeout = window.setTimeout(() => {
           loop();
