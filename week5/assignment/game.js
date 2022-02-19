@@ -90,7 +90,6 @@ function mousePressed () {
     if (gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
       console.log('flipped', cards[k]);
       gameState.flippedCards.push(cards[k]);
-      return false; // added this so that it doesn't log twice
     }
   }
   if (gameState.flippedCards.length === 2) {
