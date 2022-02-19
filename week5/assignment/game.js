@@ -5,7 +5,7 @@ let startingX = 30;
 let startingY = 200;
 let cards = [];
 const gameState = {
-  totalPairs: 0,
+  totalPairs: 8,
   flippedCards: [],
   numMatched: 0,
   attempts: 0,
@@ -51,11 +51,11 @@ function setup () {
 }
 
 function draw () {
-  background(255);
+  background(244, 240, 233);
   if (gameState.numMatched === gameState.totalPairs) {
-    fill('yellow');
-    textsize(66);
-    text('you win!', 400, 425);
+    fill(255, 102, 29);
+    textSize(40);
+    text('you win!', 710, 160);
     noLoop();
   }
   for (let k = 0; k < cards.length; k++) {
@@ -64,6 +64,15 @@ function draw () {
     }
     cards[k].show();
   }
+  noLoop();
+  gameState.flippedCards.length = 0;
+  gameState.waiting = false;
+  fill(0, 44, 0);
+  textSize(70);
+  text('Sushi Roll Memory Game', 30, 80);
+  textSize(40);
+  text('attempts ' + gameState.attempts, 30, 160);
+  text('matches ' + gameState.numMatched, 370, 160);
 }
 
 function mousePressed () {
@@ -76,11 +85,12 @@ function mousePressed () {
     if (gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
       console.log('flipped', cards[k]);
       gameState.flippedCards.push(cards[k]);
-      return false;
+      return false; // added this so that it doesn't log twice
     }
   }
   if (gameState.flippedCards.length === 2) {
-    if (gameState.flippedCards[0].faceImage === gameState.flippedCards[1].faceImage) {
+    gameState.attempts++;
+    if (gameState.flippedCards[0].cardfaceImg === gameState.flippedCards[1].cardfaceImg) {
       // cards match! time to score!
       // mark cards as matched so they don't flip back
       gameState.flippedCards[0].isMatch = true;
@@ -95,7 +105,7 @@ function mousePressed () {
         const loopTimeout = window.setTimeout(() => {
           loop();
           window.clearTimeout(loopTimeout);
-        }, 1000)
+        }, 1000);
     }
   }
 }
@@ -148,7 +158,7 @@ class Card {
 function shuffleArray (array) {
   let counter = array.length;
   while (counter > 0) {
-    //Pick random index
+    //pick random index
     const idx = Math.floor(Math.random() * counter);
     //decrease counter by 1 (decrement)
     counter--;
