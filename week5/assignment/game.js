@@ -29,7 +29,6 @@ function preload() {
 
 function setup () {
   createCanvas(1080, 1080);
-  background(255);
   let selectedFaces = [];
   for (let z = 0; z < 8; z++) {
     const randomIdx = floor(random(cardfaceArray.length));
@@ -48,6 +47,22 @@ function setup () {
     }
     startingY += 225;
     startingX = 30;
+  }
+}
+
+function draw () {
+  background(255);
+  if (gameState.numMatched === gameState.totalPairs) {
+    fill('yellow');
+    textsize(66);
+    text('you win!', 400, 425);
+    noLoop();
+  }
+  for (let k = 0; k < cards.length; k++) {
+    if (!cards[k].isMatch) {
+      cards[k].face = DOWN;
+    }
+    cards[k].show();
   }
 }
 
