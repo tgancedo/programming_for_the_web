@@ -5,7 +5,11 @@ let startingX = 30;
 let startingY = 200;
 let cards = [];
 const gameState = {
-
+  totalPairs: 0,
+  flippedCards: [],
+  numMatched: 0,
+  attempts: 0,
+  waiting: false
 };
 let cardfaceArray = [];
 
@@ -35,6 +39,7 @@ function setup () {
     //remove the used cardface so it doesn't get randomly selected again
     cardfaceArray.splice(randomIdx, 1);
   }
+  selectedFaces = shuffleArray(selectedFaces);
   for (let j = 0; j < 4; j++) {
     for (let i = 0; i < 4; i++) {
       const faceImage = selectedFaces.pop();
@@ -63,19 +68,20 @@ class Card {
     this.height = 200;
     this.face = DOWN;
     this.cardfaceImg = cardfaceImg;
+    this.isMatch = false;
     this.show();
   }
 
   show () {
-    if(this.face === DOWN) {
-      noStroke();
-      rect(this.x, this.y, this.width, this.height);
-      image(cardback, this.x, this.y);
-    } else {
+    if(this.face === UP || this.isMatch) {
       stroke(255);
       strokeWeight(2);
       rect(this.x, this.y, this.width, this.height);
       image(this.cardfaceImg, this.x, this.y);
+    } else {
+      noStroke();
+      rect(this.x, this.y, this.width, this.height);
+      image(cardback, this.x, this.y);
     }
   }
 
@@ -98,3 +104,19 @@ class Card {
     this.show()
   }
 }
+
+function shuffleArray (array) {
+  let counter = array.length;
+  while (counter > 0) {
+    //Pick random index
+    const idx = Math.floor(Math.random() * counter);
+    //decrease counter by 1 (decrement)
+    counter--;
+    //swap the last element with it
+    const temp = array[counter];
+    array[counter] = array[idx];
+    array[idx] = temp;
+  }
+  return array;
+}
+
