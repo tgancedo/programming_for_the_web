@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Vue is awesome</title>
+  </head>
+
+  <body>
+    <div id="myApp">
+      <h1>{{message}}</h1>
+      <p v-if="seen">What is my favorite color?</p>
+      <p v-else>Green</p>
+      <button @click="seen = false">See answer</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
