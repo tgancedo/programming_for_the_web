@@ -1,0 +1,14 @@
+body {
+  background-image: url("assets/landscape.jpg");
+  color: white;
+ }
+
+ h1 {
+   font-size: 100px;
+   padding-left: 50px;
+ }
+
+ li {
+   font-size: 60px;
+   list-style-position: inside;
+ }
