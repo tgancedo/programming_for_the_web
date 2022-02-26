@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,11 +9,12 @@
   <link rel="stylesheet" href="llamas.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div id="app">
     <h1>Llama Facts</h1>
     <ol>
-      <li>{{llamaSmart}}</li>
+      <li v-if="llamaIsSmart">{{llamaSmart}}</li>
       <li>{{llamaLife}}</li>
       <li>{{llamaSocial}}</li>
       <li>{{llamaTall}}</li>

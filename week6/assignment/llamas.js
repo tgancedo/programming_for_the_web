@@ -1,6 +1,7 @@
 new Vue({
   el: "#app",
   data: {
+      llamaIsSmart: true,
       llamaSmart: "Llamas are smart.",
       llamaLife: "A llama's lifespan is 20 years.",
       llamaSocial: "Llamas are very social.",
