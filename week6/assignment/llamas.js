@@ -1,4 +1,3 @@
-//facts from https://www.discovery.com/nature/llama-mia--10-fun-facts-about-llamas-pictures
 new Vue({
   el: "#app",
   data: {
