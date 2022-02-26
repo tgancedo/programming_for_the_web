@@ -1,14 +1,28 @@
 body {
   background-image: url("assets/landscape.jpg");
-  color: white;
+  color: rgb(252, 229, 229);
+  padding-left: 50px;
+  font-family: 'DM Serif Display', serif;
  }
 
  h1 {
    font-size: 100px;
-   padding-left: 50px;
+   margin-top: 30px;
+ }
+
+ ol {
+  padding-left: 50px;
  }
 
  li {
    font-size: 60px;
-   list-style-position: inside;
+   padding-left: 5px;
  }
+
+ a {
+   color: white;
+ }
+
+ p {
+   font-size: 18px;
+}
