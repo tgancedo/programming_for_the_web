@@ -7,18 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Llamas and Alpacas</title>
   <meta name="google" content="notranslate">
-  <link ref="stylesheet" href="style.css">
-  <script src="https://unpkg.com/vue@3"></script>
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <h1>Llamas and Alpacas</h1>
   <div id="app" v-cloak>
-    <ul>
-      <li><a :href ="llamas" :title="llamasTitle" target="blank">Llamas</a></li>
-      <li><a :href ="alpacas" :title="alpacasTitle" target="blank">Alpacas</a></li>
-    </ul>
+    <h1 :style="[baseStyle, overRideStyle]">
+      Llamas and Alpacas
+    </h1>
+    
+    <h2 :class="{active: isActive}">
+      Did you know that <a :href ="alpacas" :title="alpacasTitle" target="blank">alpacas</a> are smaller than <a :href ="llamas" :title="llamasTitle" target="blank">llamas</a>? They're also nicer than llamas. But llamas are better at guarding animals.
+    </h2>
   </div>
+
+  <script src="https://unpkg.com/vue@3"></script>
   <script src="script.js"></script>
 </body>
 
