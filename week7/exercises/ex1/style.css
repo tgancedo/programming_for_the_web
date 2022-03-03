@@ -1,3 +1,19 @@
 [v-cloak] {
   display: none
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: peachpuff;
+  margin: 40px;
+  font-size: 40px;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+.active {
+  color: brown;
+}
