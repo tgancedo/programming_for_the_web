@@ -32,7 +32,7 @@ Vue.createApp({
         rarity: "not common",
         filmType: "620 Film",
         description: "This pseudo twins lens reflex camera is made out of bakelite, an early form of plastic from the Art Deco era."
-      },]
+      }]
     }
   }
-}).mount("#camera-list");
+}).mount("#cameraList");
