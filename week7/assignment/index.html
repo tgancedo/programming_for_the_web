@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vintage Camera Collection</title>
+  <script src="https://unpkg.com/vue@3"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <h1>Vintage Camera Collection</h1>
+  <div id="cameraList">
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Released</th>
+      <th>Rarity</th>
+      <th>Film Type</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      <tr v-for="(camera, index) in cameras">
+        <td>{{camera.name}}</td>
+        <td>{{camera.released}}</td>
+        <td>{{camera.rarity}}</td>
+        <td>{{camera.filmType}}</td>
+        <td>{{camera.description}}</td>
+      </tr>
+    </tbody>
+  </table>
   
+    
+  </div>
+
+  <script src="collection.js"></script>
 </body>
 </html>
