@@ -14,14 +14,16 @@
   <div id="cameraList">
   <table>
     <thead>
+      <th>Image</th>
       <th>Name</th>
       <th>Released</th>
       <th>Rarity</th>
       <th>Film Type</th>
-      <th>Description</th>
+      <th>Description</th> 
     </thead>
     <tbody>
-      <tr v-for="(camera, index) in cameras">
+      <tr v-for="(camera, index) in cameras" v-bind:class="{odd: index % 2 !== 0}">
+        <td><img v-bind:title="camera.name" v-bind:src="camera.image" v-bind:alt="camera.name + ' ' + camera.description"></td>
         <td>{{camera.name}}</td>
         <td>{{camera.released}}</td>
         <td>{{camera.rarity}}</td>
