@@ -1,3 +1,7 @@
 .odd {
   background: #eee;
 }
+img {
+  border-radius: 30px;
+  width: 300px;
+}
