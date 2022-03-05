@@ -1,19 +1,36 @@
 /* Add your styles here */
+[v-cloak] {
+  display: none
+}
+
 html {
   font-family: Verdana, Geneva, "DejaVu Sans", sans-serif
 }
 .llama-list-title {
-  border-bottom: 2px solid #333;
+  border-bottom: 2px dotted #ffbe5d;
   margin: 10px auto;
   text-align: center;
   font-weight: 400;
 }
 .list-container {
-  border-bottom: 1px solid #333;
-  padding: 5px;
+  padding: 10px;
 }
 .list-head .rank, .list-head .name {
   display: inline-block;
   width: 45%;
   text-align: center;
+}
+
+.odd {
+  background: #fff2e6;
+  padding: 10px;
+}
+
+.even {
+  background: #ffbe5d;
+  padding: 10px;
+}
+
+.special {
+  text-transform: uppercase;
 }
