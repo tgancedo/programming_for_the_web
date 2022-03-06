@@ -7,10 +7,18 @@
   <title>Vintage Camera Collection</title>
   <script src="https://unpkg.com/vue@3"></script>
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&family=Ranchers&family=Spicy+Rice&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <h1>Vintage Camera Collection</h1>
+  <div class="legend">
+    <div class="dot"></div>
+    <span class="legendtext">Rare</span>
+  </div>
   <div id="cameraList">
   <table>
     <thead>
@@ -19,21 +27,28 @@
       <th>Released</th>
       <th>Rarity</th>
       <th>Film Type</th>
-      <th>Description</th> 
+      <th class="description">Description</th> 
     </thead>
     <tbody>
-      <tr v-for="(camera, index) in cameras" v-bind:class="{odd: index % 2 !== 0}">
-        <td><img v-bind:title="camera.name" v-bind:src="camera.image" v-bind:alt="camera.name + ' ' + camera.description"></td>
+      <tr 
+      v-for="(camera, index) in cameras" 
+      :class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !==0}"
+      >
+        <td>
+          <img 
+          :title="camera.name" 
+          :src="camera.image" 
+          :alt="camera.name + ' ' + camera.description"
+          >
+        </td>
         <td>{{camera.name}}</td>
         <td>{{camera.released}}</td>
-        <td>{{camera.rarity}}</td>
+        <td :class="{rare: camera.rarity.toLowerCase().includes('rare')}">{{camera.rarity}}</td>
         <td>{{camera.filmType}}</td>
         <td>{{camera.description}}</td>
       </tr>
     </tbody>
   </table>
-  
-    
   </div>
 
   <script src="collection.js"></script>
