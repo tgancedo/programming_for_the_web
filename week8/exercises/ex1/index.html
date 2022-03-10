@@ -24,10 +24,12 @@
         <label for="street">Street Address</label><input id="street" type="text" v-model="street">
       </div>
       <div>
-        <label for="state">State</label><select name="" id="state"></select>
+        <label for="state">State</label><select name="" id="state" v-model="state">
+          <option v-for="state in availableStates" v-bind:value="state.value">{{state.name}}</option>
+        </select>
       </div>
       <div>
-        <label for="">Country</label><input type="text">
+        <label for="country">Country</label><input id="country" type="text" maxlength="3" v-model="country">
       </div>
       <div class="alpaca-color">
         <p>Favorite Alpaca Colors</p>
@@ -35,7 +37,7 @@
           <ul>
             <li v-for="color in colors">
               <label v-bind:for="color.value">
-                <input type="checkbox" name="" v-bind:id="color.value" v-bind:value="color.value">
+                <input id="color" type="checkbox" v-bind:id="color.value" v-bind:value="color.value" v-model="selectedColors">
                 {{color.name}}
               </label>
             </li>
@@ -53,6 +55,8 @@
         Last Name: {{lastName}}<br>
         Street: {{street}}<br>
         State: {{state}}<br>
+        Country: {{country}}<br>
+        Color: {{selectedColors}}<br>
         Status: {{status}}
       </div>
     </form>
