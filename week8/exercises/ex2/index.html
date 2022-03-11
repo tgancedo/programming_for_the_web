@@ -11,18 +11,22 @@
   <h1>Exercise 8.1</h1>
   <div id="calcApp">
     <form>
-      <div>
-        <input type="number" placeholder="first number">
-        <select>
+      <div class="container">
+        <input v-model.number="firstNum" type="number" placeholder="first number" class="firstNum">
+        <select v-model="operation" class="operation">
           <option value="add">+</option>
           <option value="subtract">-</option>
           <option value="multiply">&times;</option>
           <option value="divide">&divide;</option>
         </select>
-        <input type="number" placeholder="second number">
+        <input v-model.number="secondNum" type="number" placeholder="second number" class="secondNum">
       </div>
-      <button type="button">Calculate</button>
+      <button @click="calculate(firstNum, secondNum)" type="button" class="button">Calculate</button>
     </form>
+    <div class="total">
+      <!-- Operation: {{operation}}<br> -->
+      Total: <strong>{{total}}</strong>
+    </div>
   </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="script.js"></script>
