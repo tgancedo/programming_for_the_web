@@ -1,0 +1,44 @@
+body, h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 40px;
+}
+
+.container {
+  display: flex;
+}
+
+.firstNum {
+  flex-grow: 1;
+  padding: 30px;
+  font-size: 40px;
+  background-color: lightgrey;
+  border: none;
+}
+
+.secondNum {
+  flex-grow: 1;
+  padding: 30px;
+  font-size: 40px;
+  background-color: lightgray;
+  border: none;
+}
+
+.total {
+  font-size: 40px;
+  padding: 40px;
+}
+
+.button {
+  padding: 40px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  border: none;
+}
+
+.operation {
+  background-color: grey;
+  font-size: 40px;
+}
