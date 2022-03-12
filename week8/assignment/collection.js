@@ -63,6 +63,11 @@ const vm = Vue.createApp({
         filmType: "",
         collected: false
       };
-    }
+    },
+    deleteCamera: item => {
+      vm.cameras = vm.cameras.filter(camera => 
+        { return camera!== item;
+        })
+      }
   }
 }).mount("#cameraList");
