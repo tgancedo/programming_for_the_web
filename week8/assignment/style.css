@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: orange;
+  text-align: center;
+  font-size: 1.2rem;
+}
+h1 {
+  padding-bottom: 0px;
+  font-size: 70px;
+  font-family: 'Goblin One', cursive;
+  margin-bottom: 0;
+}
+thead{
+  pointer-events: none;
+}
+th.description {
+  width: 30%;
+}
+td {
+  padding: 20px;
+  border-radius: 30px;
+}
+tr:hover {
+  background-color: #53535344;
+}
+.odd {
+  background: #ffffff;
+}
+.even {
+  background: #000;
+  color: #ffffff;
+}
+img {
+  border-radius: 30px;
+  width: 300px;
+}
+.rare {
+  color: #ff0000;
+}
+.legend {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: inline-block;
+}
+.legendtext {
+  padding-left: 10px;
+  margin: auto 0;
+}
