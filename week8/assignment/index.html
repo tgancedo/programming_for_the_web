@@ -27,7 +27,7 @@
       <th>Released</th>
       <th>Rarity</th>
       <th>Film Type</th>
-      <th class="description">Description</th> 
+      <th>Collected</th> 
     </thead>
     <tbody>
       <tr 
@@ -45,10 +45,40 @@
         <td>{{camera.released}}</td>
         <td :class="{rare: camera.rarity.toLowerCase().includes('rare')}">{{camera.rarity}}</td>
         <td>{{camera.filmType}}</td>
-        <td>{{camera.description}}</td>
+        <td>{{camera.collected}}</td>
       </tr>
     </tbody>
   </table>
+  <form v-on:submit.prevent="submitHandler">
+    <fieldset>
+      <legend>Add a console to the collection</legend>
+      <div>
+        <label for="image">Image</label>
+        <input id="image" type="text" v-model="newCameraObj.image">
+      </div>
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" v-model="newCameraObj.name">
+      </div>
+      <div>
+        <label for="released">Released</label>
+        <input id="released" type="date" v-model="newCameraObj.released">
+      </div>
+      <div>
+        <label for="rarity">Rarity</label>
+        <input id="rarity" type="text" v-model="newCameraObj.rarity">
+      </div>
+      <div>
+        <label for="film">Film Type</label>
+        <input id="film" type="text" v-model="newCameraObj.film">
+      </div>
+      <div>
+        <label for="owned">Owned</label>
+        <input id="owned" type="checkbox" v-model="newCameraObj.owned">
+      </div>
+      <button type="submit">Add Item</button>
+    </fieldset>
+  </form>
   </div>
   <script src="collection.js"></script>
 </body>
