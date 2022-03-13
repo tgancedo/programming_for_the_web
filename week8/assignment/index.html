@@ -10,14 +10,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&family=Ranchers&family=Spicy+Rice&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&family=League+Spartan:wght@400&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <h1>Vintage Camera Collection</h1>
-  <div class="legend">
+  <div class="key">
     <div class="dot"></div>
-    <span class="legendtext">Rare</span>
+    <span class="legendtext">rare</span>
   </div>
   <div id="cameraList">
     <table class="table">
@@ -55,7 +55,7 @@
     </table>
     <form v-on:submit.prevent="submitHandler" class="new-camera-form">
       <fieldset>
-        <legend>Add a console to the collection</legend>
+        <legend>Add a camera to the collection</legend>
         <div>
           <label for="image">Image</label>
           <input id="image" type="text" v-model="newCameraObj.image">
@@ -66,7 +66,7 @@
         </div>
         <div>
           <label for="released">Released</label>
-          <input id="released" type="date" v-model="newCameraObj.released">
+          <input id="released" type="number" min="1900" max="2022" v-model="newCameraObj.released">
         </div>
         <div>
           <label for="rarity">Rarity</label>
