@@ -45,6 +45,48 @@ const vm = Vue.createApp({
         rarity: "not common",
         filmType: "620 Film",
         collected: true
+      }, {
+        image: "assets/minolta.jpg",
+        name: "Minolta 16 Model P",
+        released: "1960",
+        rarity: "not common",
+        filmType: "16mm Film",
+        collected: true
+      }, {
+        image: "assets/sun600.jpg",
+        name: "Polaroid Sun 600",
+        released: "1981",
+        rarity: "very common",
+        filmType: "600 Pack Film",
+        collected: true
+      }, {
+        image: "assets/spectra.jpg",
+        name: "Polaroid Spectra System SE",
+        released: "1997",
+        rarity: "very common",
+        filmType: "1200 Pack Film",
+        collected: true
+      }, {
+        image: "assets/instamatic.jpg",
+        name: "Kodak Instamatic X-15",
+        released: "1970",
+        rarity: "rare",
+        filmType: "126 Film",
+        collected: true
+      }, {
+        image: "assets/teleinstamatic.jpg",
+        name: "Kodak Tele-Instamatic 608",
+        released: "1975",
+        rarity: "common",
+        filmType: "110 Film",
+        collected: true
+      }, {
+        image: "assets/argus.jpg",
+        name: "Argus C3",
+        released: "1939",
+        rarity: "rare",
+        filmType: "35mm Film",
+        collected: true
       }]
     }
   },
