@@ -13,7 +13,6 @@ function setup () {
 
 function draw () {
   
-
   clear()
   background(30)
   noFill()
