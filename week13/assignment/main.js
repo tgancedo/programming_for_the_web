@@ -25,7 +25,7 @@ function draw() {
   yPos = yPos + 2;
 
   if(yPos > 900){
-      yPos = -100; 
+    yPos = -100; 
   }
 
   // bugs
